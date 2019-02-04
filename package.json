@@ -1,0 +1,8 @@
+{
+  "name": "site_bootstrap_3wa",
+  "version": "1.0.0",
+  "description": "Site de démonstration bootstrap 4",
+  "main": "index.js",
+  "author": "Aristide Bassolé \" <bassole.aristide@laposte.net>\"",
+  "license": "MIT"
+}

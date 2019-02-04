@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\dwas9\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\dwas9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs;C:\Users\dwas9\AppData\Local\Microsoft\WindowsApps;C:\Users\dwas9\AppData\Roaming\Dashlane\4.8.9.37516\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\dwas9\AppData\Roaming\Dashlane\4.8.9.37516\ucrt;C:\ProgramData\dwas9\atom\bin;C:\Users\dwas9\AppData\Roaming\Dashlane\5.3.1.13504\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\dwas9\AppData\Roaming\Dashlane\5.3.1.13504\ucrt;C:\Program Files\Microsoft VS Code\bin;C:\Users\dwas9\AppData\Local\GitHubDesktop\bin;C:\Users\dwas9\AppData\Roaming\Dashlane\5.6.0.15520\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\dwas9\AppData\Roaming\Dashlane\5.6.0.15520\ucrt;C:\ProgramData\dwas9\GitHubDesktop\bin;C:\Users\dwas9\AppData\Roaming\Composer\vendor\bin;C:\Users\dwas9\AppData\Local\Microsoft\WindowsApps;C:\Users\dwas9\AppData\Roaming\Dashlane\5.11.0.19338\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\dwas9\AppData\Roaming\Dashlane\5.11.0.19338\ucrt;C:\Users\dwas9\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dwas9\AppData\Roaming\npm
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  8.12.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\dwas9\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:116426:13)
+      at emitNone (events.js:106:13)
+      at Interface.emit (events.js:208:7)
+      at Interface._ttyWrite (readline.js:774:16)
+      at ReadStream.onkeypress (readline.js:158:10)
+      at emitTwo (events.js:126:13)
+      at ReadStream.emit (events.js:214:7)
+      at emitKeys (internal/readline.js:420:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1010:36)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
