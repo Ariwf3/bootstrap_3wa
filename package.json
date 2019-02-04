@@ -8,5 +8,10 @@
     "type": "git"
   },
   "author": "Aristide Bassolé \" <bassole.aristide@laposte.net>\"",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1"
+  }
 }
