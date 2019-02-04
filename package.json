@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Site de démonstration bootstrap 4",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/Ariwf3/bootstrap_3wa",
+    "type": "git"
+  },
   "author": "Aristide Bassolé \" <bassole.aristide@laposte.net>\"",
   "license": "MIT"
 }
