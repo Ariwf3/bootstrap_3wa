@@ -1,0 +1,136 @@
+body {
+    background: lavender;
+}
+
+/* ----------------  HEADER -------------- */
+
+/* bannière */
+header figure img  {
+    max-height: 17em;
+    width: 100%;
+    margin: 0 !important;
+}
+figure {
+    position: relative;
+}
+header figcaption {
+    position: absolute;
+    left: 34%;
+    bottom: 5em;
+}
+
+header figcaption h1 {
+    color: white;
+}
+#umbrella {
+    color: lightskyblue;
+}
+/* ---------------- FIN HEADER -------------- */
+
+
+
+/*---------------- NAV ------------------------------ 
+
+nav style hérité de style.css
+
+
+
+/* -------------------MAIN------------------ */
+
+/* commun */
+main {
+    background: lavender;
+    padding-top: 3em
+}
+
+/* dropdown */
+.dropdow_centres_interets {
+    padding-top: 1.5em;
+    padding-bottom: 6.5em;
+}
+
+
+h2 {
+    font-size: 2.5em;
+    color: #bc3010;
+}
+
+section p {
+    color: #323335;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* section association */
+
+
+/*commun sections */
+section#sport, section#voyages, section#nouvelles_technologies, section#lecture {
+    margin-top: 3em;
+}
+
+/* section sport */
+
+
+
+/*section voyages */
+section#voyages {
+    margin-top: 3em;
+}
+
+/* section nouvelles technologies */
+section#nouvelles_technologies #carousel-item_web img {
+    background: lightslategray ;
+    border: 0.5em solid white;
+    
+}
+section#nouvelles_technologies #carousel_item_playstation img {
+    background: #323335 ;
+}
+section#nouvelles_technologies #carousel_item_computer img {
+    background: grey ;
+}
+
+
+/*section lecture */
+
+#img_duckett {
+    background: grey;
+}
+
+/* ---------------------FIN MAIN --------------------*/
+
+
+/* ----------------  FOOTER -------------- */
+
+footer {
+    margin-top: 6em;
+    padding: 0 !important;
+}
+
+footer nav {
+    padding: 0em 2em !important;
+}
+
+/* bannière */
+figure {
+    margin-bottom: 0 !important;
+}
+/* bannière */
+footer img {
+    max-height: 17em;
+    width: 100%;
+    margin: 0;
+}
+
+
+/* ---------------- FIN FOOTER -------------- */
+
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 500px)
+{
+    header figure img,#association .carousel img, #sport .carousel img, #img_duckett {
+        height: auto !important;
+    }
+}

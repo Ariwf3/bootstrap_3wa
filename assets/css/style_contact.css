@@ -1,0 +1,66 @@
+
+body {
+    background: lavender;
+}
+
+/*--------------- HEADER --------------------- */
+header {
+    padding: 0 !important;
+    background: white;
+}
+
+header figure img  {
+    max-height: 17em;
+    width: 100%;
+    margin: 0 !important;
+}
+header figcaption {
+    background: white;
+}
+header figcaption h1 {
+    color: mediumslateblue;
+    margin: 0;
+    font-size: 4em;
+}
+/* header figcaption {
+    position: absolute;
+    left: 26em;
+    top: 13.1em;
+} */
+/*--------------- FIN HEADER --------------------- */
+
+legend {
+    color: grey;
+    font-style: italic
+}
+
+label {
+    font-style: italic;
+}
+
+
+/* -------------------MAIN------------------ */
+main {
+    background: lavender;
+    padding: 4em 1em;
+}
+
+#iframe_partie_contact {
+    height: 100%;
+    width: 100%;
+}
+/* ---------------------FIN MAIN --------------------*/
+
+
+
+
+
+/* ----------------  FOOTER -------------- */
+
+footer nav {
+    padding: 0em 2em !important;
+}
+
+.contact_social {
+    padding: 1.5em;
+}
