@@ -1,6 +1,6 @@
 
 body {
-    background: lavender;
+    background: palegoldenrod;
 }
 
 /*--------------- HEADER --------------------- */
@@ -41,7 +41,6 @@ label {
 
 /* -------------------MAIN------------------ */
 main {
-    background: lavender;
     padding: 4em 1em;
 }
 
@@ -57,8 +56,12 @@ main {
 
 /* ----------------  FOOTER -------------- */
 
-footer nav {
-    padding: 0em 2em !important;
+
+
+/* espace marge interieure taille police liens nav footer */
+footer nav a.nav-link {
+    padding: 1em;
+    font-size: 1.1em;
 }
 
 .contact_social {

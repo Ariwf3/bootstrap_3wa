@@ -1,5 +1,5 @@
 body {
-    background: lavender;
+    background: palegoldenrod;
 }
 
 /* ----------------  HEADER -------------- */
@@ -39,7 +39,6 @@ nav style hérité de style.css
 
 /* commun */
 main {
-    background: lavender;
     padding-top: 3em
 }
 
@@ -108,8 +107,11 @@ footer {
     padding: 0 !important;
 }
 
-footer nav {
-    padding: 0em 2em !important;
+/* NAV */
+/* espace marge interieure taille police liens nav footer */
+footer nav a.nav-link {
+    padding: 1em;
+    font-size: 1.1em;
 }
 
 /* bannière */

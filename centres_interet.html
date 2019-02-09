@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Centres d'intérêts-Aristide Bassolé site Bootstrap</title>
+    <!-- bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- bootstrap CDN -->
+
+    <!-- font awesome sources -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- font awesome sources -->
+
+    <!-- CSS perso -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style_interets.css">
+</head>
+<body>
+    <!-- ROW HEADER-->
+    <div class="row">
+        <header class = "col-md-12 container-fluid">
+            <figure>
+                <img src="assets/img/bannieres/games.jpeg" class="figure-img img-fluid" alt="">
+                <figcaption class ="figure-caption" id="titre_centre">
+                    <h1 id="ancre_h1">Mes centres d'intérêts <i class="fas fa-umbrella-beach" id="umbrella"></i></h1>
+                </figcaption>    
+            </figure>
+        </header>
+    </div>
+    <!-- FIN ROW HEADER--> 
+
+    <!-- ROW NAV -->
+    <div class="row">
+        <nav class="nav nav-pills nav-justified col-md-12 container-fluid rounded">
+            <a class="nav-item nav-link" href="index.html">Accueil <i class="fas fa-home"></i></a>
+            <a class="nav-item nav-link active" href="#">Centre d'intérêts <i class="fas fa-bowling-ball"></i></a>
+            <a class="nav-item nav-link" href="https://ariwf3.github.io/CV/" target="_blank">Curriculum Vitae <i class="fas fa-university"></i><i class="fas fa-pen"></i></a>
+            <a class="nav-item nav-link" href="contact.html" tabindex="-1">Contact <i class="fas fa-address-card"></i></a>
+        </nav>
+    </div>
+<!-- FIN ROW NAV -->
+
+    <!-- DEBUT CONTAINER-->
+    <div class="container">
+        <!-- DEBUT ROW MAIN-->
+        <div class="row">
+            <main class="col-md-12">
+                <!-- Dropdown-->
+                <div class="dropdown dropright text-center dropdow_centres_interets">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Aller directement à une rubrique
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#association">Association</a>
+                        <a class="dropdown-item" href="#sport">Sport</a>
+                        <a class="dropdown-item" href="#voyages">Voyages</a>
+                        <a class="dropdown-item" href="#nouvelles_technologies">Nouvelles technologies et multimédia</a>
+                        <a class="dropdown-item" href="#lecture">Lecture</a>
+                    </div>
+                </div>
+                <!-- SECTION ASSOC-->
+                <section id = "association">
+                    <h2>Association ADABIAS <i class="fas fa-hands-helping"></i></h2>
+                    <p><i class="fas fa-paper-plane"></i>  Membre d'une association caritative interculturelle,Vente annuelle d'objets artisanaux et de spécialités culinaires destinés au financement deprojets au Burkina Faso notamment la scolarisation d’enfants.</p>
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/img/centres_interets/assoc/adab1.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/assoc/adab2.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/assoc/adab3.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                            </a>
+                    </div>
+                </section>
+                <!-- FIN SECTION ASSOC-->
+
+
+                <!-- SECTION SPORT-->
+                <section id = "sport">
+                    <h2>Sport <i class="fas fa-running"></i></h2>
+                    <p><i class="fas fa-paper-plane"></i>  Pratique de différents sports collectifs et individuels (Course à pied,crossfit,boxe,football..)</p>
+                    <div id="carousel_sport" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/img/centres_interets/sport/boxing.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/sport/run.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/sport/football.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/sport/crossfit.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel_sport" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_sport" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+                <!-- FIN SECTION SPORT-->
+
+                <!-- SECTION VOYAGES-->
+                <section id ="voyages">
+                    <h2>Voyages <i class="fas fa-plane"></i></h2>
+                    <p><i class="fas fa-paper-plane"></i> Découverte de différentes cultures à travers le monde (Birmanie,Thaïlande, Burkina Faso, Côte d'ivoire,Portugal, Italie, République Tchèque...)</p>
+                    <div id="carousel_voyages" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/img/centres_interets/voyage/thai.jpg" class="d-block w-100 rounded img-thumbnail" alt="photo Thailande">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/voyage/burkina.jpg" class="d-block w-100 rounded img-thumbnail" alt="photo Afrique">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/voyage/prague.jpg" class="d-block w-100 rounded img-thumbnail" alt="photo Prague">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/voyage/algarve.jpeg" class="d-block w-100 rounded img-thumbnail" alt="photo algarve">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel_voyages" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_voyages" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+                <!-- FIN SECTION VOYAGES-->
+
+                <!-- SECTION NOUVELLES TECHNOLOGIES-->
+                <section id ="nouvelles_technologies">
+                    <h2>Nouvelles technologies et multimédia <i class="fas fa-headphones"></i> <i class="fas fa-desktop"></i> <i class="fas fa-hdd"></i></h2>
+                    <p><i class="fas fa-paper-plane"></i> Passion pour les nouvelles technologies,séries TV, cinéma et la musique</p>
+                    <div id="carousel_new_tech" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-interval="2000">
+                                <img src="assets/img/centres_interets/new_tech/chat_casque.jpg" class="d-block w-100 rounded img-thumbnail" alt="chat qui écoute musique">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/new_tech/albums-musique1.jpg" class="d-block w-100 rounded img-thumbnail" alt="albums musique">
+                            </div>
+                            <div class="carousel-item" id="carousel-item_web">
+                                <img src="assets/img/centres_interets/new_tech/web2.0.png" class="d-block w-100 rounded img-thumbnail" alt="web2.0">
+                            </div>
+                            <div class="carousel-item" id="carousel_item_computer">
+                                <img src="assets/img/centres_interets/new_tech/computer.jpg" class="d-block w-100 rounded img-thumbnail" alt="ordinateur">
+                            </div>
+                            <div class="carousel-item" id="carousel_item_playstation">
+                                <img src="assets/img/centres_interets/new_tech/playstation.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            <div class="carousel-item" id="carousel_item_netflix">
+                                <img src="assets/img/centres_interets/new_tech/netflix_shows-1.jpg" class="d-block w-100 rounded img-thumbnail" alt="image netflix">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel_new_tech" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_new_tech" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+                <!-- FIN SECTION NOUVELLES TECHNOLOGIES-->
+
+                <!-- SECTION LECTURE -->
+                <section id ="lecture">
+                    <h2>Lecture <i class="fas fa-book-reader"></i></h2>
+                    <p><i class="fas fa-paper-plane"></i> Lectures diverses et variées (Presse spécialisée Web et informatique, romans policiers et fantastiques, bande dessinées, comics, mangas...)</p>
+                    <div id="carousel_lecture" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/img/centres_interets/lecture/book-duckett.jpg" class="d-block w-100 rounded img-thumbnail" id="img_duckett" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/lecture/livres-angoissant-dhorreur.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/lecture/comics.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/centres_interets/lecture/onepiece.jpg" class="d-block w-100 rounded img-thumbnail" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel_lecture" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_lecture" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+                <!-- FIN SECTION LECTURE-->
+
+            </main>
+        </div>
+        <!-- FIN ROW MAIN-->
+    </div>
+    <!-- FIN CONTAINER-->
+
+    <div class="row">
+        <footer class = "col-md-12 container-fluid">
+            <!-- ROW NAVBAR -->
+            <div class="row">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary col-md-12">
+                            <a class="navbar-brand" href="#">Haut de page</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Accueil <i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                    <a class="nav-link " href="#ancre_h1">Centres d'intérêt <i class="fas fa-bowling-ball"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="https://ariwf3.github.io/CV/" target="_blank">Curriculum Vitae <i class="fas fa-university"></i> <i class="fas fa-pen"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact <i class="fas fa-address-card"></i></a>
+                                    </li>
+                                </ul>
+                                <p id="catSymbol_nav"><i class="fas fa-cat signature_cat"></i></p>
+                            </div>
+                        </nav>
+            </div>
+            <!-- END ROW NAVBAR -->
+            <figure>
+                <img src="assets/img/bannieres/golf_banner.jpg" class="img-fluid" alt="">    
+            </figure>
+        </footer>
+    </div>
+
+
+    <!-- sources js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src = "assets/js/script_centre_interet.js"></script>
+</body>
+
+</html>

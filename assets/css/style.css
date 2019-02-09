@@ -1,24 +1,23 @@
 
 /* STYLES GENERAUX ET COMMUNS */
-body {
-    background-image: url("../../assets/img/logos_images_index/fond.png");
-    background-repeat: repeat-x;
-}
-
-.container {
-    /* centrage */
-    margin: 0 auto;
-}
-
-header, .img-chat, nav, .navbar  {
-    background: lavender;
-}
-
-main,footer {
+body,main {
     background: palegoldenrod;
 }
 
+
+nav, .navbar  {
+    background: lavender;
+}
+
+/* main {
+    
+} */
+
 /* --------------------HEADER-------------------*/
+header {
+    padding: 1em;
+}
+
 .titre_principal, .titre_secondaire {
     color: darkslategray;
     font-weight: bold;
@@ -29,6 +28,7 @@ main,footer {
 
 .presentation {
     margin: auto;
+    font-size: 1.53em;
 }
 
 .signature_cat {
@@ -37,10 +37,10 @@ main,footer {
 
 .figure_chat {
     margin: auto;
-    max-height: 24em;
+    /* max-height: 24em; */
 }
 .img-chat {
-   margin: 0;
+    margin: 0;
 } 
 
 /* ---------------FIN HEADER-------------------- */
@@ -51,10 +51,26 @@ main,footer {
 nav {
     background: lightblue;
 }
+footer nav {
+    padding: .5rem 3rem !important;
+}
 
+/* espace marge interieure taille police liens nav header */
 nav a.nav-link {
+    padding: 1.7em;
+    font-size: 1.3em;
+}
+
+/* symbole chat nav */
+#catSymbol_nav {
+    color: white;
+    font-size: 2em;
+}
+
+/* espace marge interieure taille police liens nav footer */
+footer nav a.nav-link {
     padding: 1em;
-    font-size: 1.1em
+    font-size: 1.1em;
 }
 
 
@@ -64,7 +80,7 @@ nav a.nav-link {
 /* ------------------ MAIN ---------------------- */
 
 .jumbotron {
-    background: none;
+    background: lavender;
     margin-bottom: 0;
 }
 
@@ -76,6 +92,7 @@ nav a.nav-link {
 /* SECTION PARCOURS */
 
 #parcours {
+    padding-top: 2em;
     margin-bottom: 3.7em;
 }
 
@@ -96,14 +113,18 @@ h3 {
 
 
 
-/* FOOTER */
+/* ------------------- FOOTER ------------------- */
 footer {
     background: lavender;
 }
 .titre_secondaire {
     margin-bottom: 1em;
-    padding-top: 0.3em;
+    padding-top: 0.7em;
     font-size: 2.7em;
+}
+
+.infos_contact {
+    padding: 0 2em;
 }
 
 .lien_contact {
@@ -113,6 +134,7 @@ footer {
 }
 
 .titre_iframe {
+    font-size: 1.8em;
     font-weight: bold;
     color: darkslategray;
     margin-bottom: 0.6em;

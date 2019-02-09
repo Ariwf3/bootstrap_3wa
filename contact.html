@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact-Aristide Bassolé site Bootstrap</title>
+    <!-- bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- bootstrap CDN -->
+
+    <!-- font awesome sources -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- font awesome sources -->
+
+    <!-- CSS perso -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style_interets.css"> -->
+    <link rel="stylesheet" href="assets/css/style_contact.css">
+</head>
+<body>
+    <!-- ROW HEADER-->
+    <div class="row">
+        <header class = "col-md-12 container-fluid">
+            <figure>
+                <img src="assets/img/bannieres/contact_pen.jpg" class="figure-img img-fluid" alt="">
+                <figcaption class ="figure-caption text-center"><h1>Contact <i class="fas fa-map-marked-alt"></i></h1></figcaption>    
+            </figure>
+        </header>
+    </div>
+    <!-- FIN ROW HEADER--> 
+
+    <!-- ROW NAV -->
+    <div class="row">
+        <nav class="nav nav-pills nav-justified col-md-12 container-fluid rounded">
+            <a class="nav-item nav-link" href="index.html">Accueil <i class="fas fa-home"></i></a>
+            <a class="nav-item nav-link" href="centres_interet.html">Centres d'intérêt <i class="fas fa-bowling-ball"></i></a>
+            <a class="nav-item nav-link" href="https://ariwf3.github.io/CV/" target="_blank">Curriculium Vitae <i class="fas fa-university"></i><i class="fas fa-pen"></i></a>
+            <a class="nav-item nav-link active" href="#" tabindex="-1">Contact <i class="fas fa-address-card"></i></a>
+        </nav>
+    </div>
+    <!-- FIN ROW NAV -->
+
+    <!-- DEBUT CONTAINER-->
+    <div class="container">
+        <!-- DEBUT MAIN-->
+        <main class="row">
+            <!-- COL FORMULAIRE-->
+            <div class="col-md-6">
+                <form method="POST" action="#" id="form_contact">
+                    <fieldset>
+                        <legend>Vous pouvez me contacter directement via le formulaire ci dessous, je vous répondrai dans les plus brefs délais.</legend>
+                    </fieldset>
+                    <label for="nom" class="col-form-label-lg">Nom et Prénom :</label>
+                    <!-- ROW NOM PRENOM-->
+                    <div class="row">
+                        <!-- NOM -->
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nom.." id="nom" name="nom">
+                        </div>
+                        <!-- PRENOM -->
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Prénom.." id="prenom" name="prenom">
+                        </div>
+                    </div>
+                    <!-- FIN ROW NOM PRENOM-->
+
+                    <!-- SOCIETE -->
+                    <div class="form-group">
+                        <label for="societe" class="col-form-label-lg">Société :</label>
+                        <input type="text" class="form-control" placeholder="Nom de la Société où entreprise.." id="societe" name="societe">  
+                    </div>
+                    <!-- EMAIL -->
+                    <div class="form-group">
+                        <label for="email" class="col-form-label-lg">Email :</label>
+                        <input type="email" class="form-control" placeholder="Email.." id="email" name="email">  
+                    </div>
+                    <!-- OBJET -->
+                    <div class="form-group">
+                        <label for="objet" class="col-form-label-lg">Objet :</label>
+                        <input type="text" class="form-control" placeholder="Objet de votre message.." id="objet" name="objet">  
+                    </div>
+                    <!-- MESSAGE -->
+                    <div class="form-group">
+                        <label for="message" class="col-form-label-lg">Message :</label>
+                        <textarea class="form-control" placeholder="Votre message.." id="message" name="message"></textarea>
+                    </div>
+                    <!-- ENVOI -->
+                    <input type="submit" value="Envoyer" class="btn btn-primary">
+                </form>
+            </div>
+            <!-- FIN COL FORMULAIRE-->
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5480121.578836245!2d0.4985675391186005!3d47.88141302629982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701c64657be9%3A0xbf05ba902bfe4aab!2s3w+Academy!5e0!3m2!1sfr!2sfr!4v1547133545632"  allowfullscreen class=img-thumbnail id="iframe_partie_contact"></iframe>
+            </div>
+        </main>
+        <!-- FIN MAIN-->
+        
+    </div>
+    <!-- FIN CONTAINER-->
+
+    <div class="row">
+            <footer class = "col-md-12 container-fluid">
+                <!-- ROW NAVBAR -->
+                <div class="row">
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-primary col-md-12">
+                                <a class="navbar-brand" href="#">Haut de page</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                </button>
+                            
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Accueil <i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link " href="centres_interet.html">Centres d'intérêt <i class="fas fa-bowling-ball"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="https://ariwf3.github.io/CV/" target="_blank">Curriculium Vitae <i class="fas fa-university"></i> <i class="fas fa-pen"></i></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                    <a class="nav-link" href="ancre_h1">Contact <i class="fas fa-address-card"></i></a>
+                                    </li>
+                                </ul>
+                                    <p id="catSymbol_nav"><i class="fas fa-cat signature_cat"></i></p>
+                                </div>
+                            </nav>
+                </div>
+                <!-- END ROW NAVBAR -->
+
+                <!-- ROW TITRE CONTACT SOCIAL-->
+                <div class="row">
+                        <div class="col-md-12">
+                            <h2 class ="titre_secondaire text-center">Me contacter<i class="fas fa-cat"></i></h2>
+                        </div>
+                    </div>
+                <!-- FIN ROW TITRE CONTACT SOCIAL-->
+
+                <!-- ROW CONTACT SOCIAL-->
+                <div class="row contact_social">
+                        <div class="col-md-6">
+                            <p><i class="fas fa-envelope lien_contact"></i> <a href="mailto:bassole.aristide@laposte.net" class="lien_contact">bassole.aristide@laposte.net</a></p>
+                            <p><i class="fas fa-file-download lien_contact"></i> <a href="assets/files/CV_Aristide_Bassolé.pdf" target="blank" title="Ouvrir dans un nouvel onglet ou télécharger" class="lien_contact">Mon CV (pdf)</a></p>
+                            <!--<h3 class="titre_iframe"><i class="fas fa-map-marker-alt"></i> Me trouver</i></h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5480121.578836245!2d0.4985675391186005!3d47.88141302629982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701c64657be9%3A0xbf05ba902bfe4aab!2s3w+Academy!5e0!3m2!1sfr!2sfr!4v1547133545632" width="80%" height="200" frameborder="0" style="border:0" allowfullscreen class=img-thumbnail></iframe>-->
+                        </div>
+                        <div class="col-md-6 d-flex p-2 justify-content-around div_social">
+                            <div>
+                                <a href ="https://www.linkedin.com/in/aristidebassole/" target="_blank" title ="Linkedin"><img src="cv/logos/iconfinder_circle-linkedin_317750.png" alt="Linkedin" class="social_img img-fluid" /></a>
+                            </div>
+                            <div>
+                                <a href="https://twitter.com/arilength" target="_blank" title ="twitter"><img src="cv/logos/iconfinder_circle-twitter_317749.png" alt="Twitter" class="social_img img-fluid" /></a>
+                            </div>
+                            <div>
+                                <a href="https://github.com/Ariwf3" target="_blank" title ="github"><img src="cv/logos/iconfinder_github_317712.png" alt="Github" class="social_img img-fluid" /></a>
+                            </div>
+                            <div>
+                                <a href="https://www.facebook.com/" target="_blank" title ="facebook"><img src="cv/logos/iconfinder_circle-facebook__317752.png" alt="Github" class="social_img img-fluid" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END ROW CONTACT SOCIAL-->
+            </footer>
+    </div>
+    <!-- sources js -->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src = "assets/js/ajax.js"></script> 
+</body>
+
+</html>
