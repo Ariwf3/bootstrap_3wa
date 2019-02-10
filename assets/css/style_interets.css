@@ -3,6 +3,9 @@ body {
 }
 
 /* ----------------  HEADER -------------- */
+header {
+    padding: 0 !important;
+}
 
 /* bannière */
 header figure img  {
@@ -14,17 +17,19 @@ figure {
     position: relative;
 }
 header figcaption {
-    position: absolute;
-    left: 34%;
-    bottom: 5em;
+    text-align: center;
+    background: white;
 }
 
 header figcaption h1 {
-    color: white;
+    color: mediumslateblue;
+    padding: 0.5em;
+    font-size: 3.5em;
+    margin: 0;
 }
-#umbrella {
-    color: lightskyblue;
-}
+/* #umbrella {
+    
+} */
 /* ---------------- FIN HEADER -------------- */
 
 
