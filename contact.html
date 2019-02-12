@@ -59,42 +59,42 @@
                     <!-- ROW NOM PRENOM-->
                     <div class="row">
                         <!-- NOM -->
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Nom.." id="nom" name="nom">
+                        <div class="col col-nom">
+                            <input type="text" class="form-control" placeholder="Nom.." id="nom" name="nom" required>
                         </div>
                         <!-- PRENOM -->
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Prénom.." id="prenom" name="prenom">
+                        <div class="col col-prenom">
+                            <input type="text" class="form-control" placeholder="Prénom.." id="prenom" name="prenom" required>
                         </div>
                     </div>
                     <!-- FIN ROW NOM PRENOM-->
 
                     <!-- SOCIETE -->
-                    <div class="form-group">
+                    <div class="form-group col-societe">
                         <label for="societe" class="col-form-label-lg">Société :</label>
-                        <input type="text" class="form-control" placeholder="Nom de la Société où entreprise.." id="societe" name="societe">  
+                        <input type="text" class="form-control" placeholder="Nom de la Société où entreprise si vous en avez une.." id="societe" name="societe">  
                     </div>
                     <!-- EMAIL -->
-                    <div class="form-group">
+                    <div class="form-group col-email">
                         <label for="email" class="col-form-label-lg">Email :</label>
-                        <input type="email" class="form-control" placeholder="Email.." id="email" name="email">  
+                        <input type="email" class="form-control" placeholder="Email.." id="email" name="email" required>  
                     </div>
                     <!-- OBJET -->
-                    <div class="form-group">
+                    <div class="form-group col-objet">
                         <label for="objet" class="col-form-label-lg">Objet :</label>
-                        <input type="text" class="form-control" placeholder="Objet de votre message.." id="objet" name="objet">  
+                        <input type="text" class="form-control" placeholder="Objet de votre message.." id="objet" name="objet" required>  
                     </div>
                     <!-- MESSAGE -->
-                    <div class="form-group">
+                    <div class="form-group col-message">
                         <label for="message" class="col-form-label-lg">Message :</label>
-                        <textarea class="form-control" placeholder="Votre message.." id="message" name="message"></textarea>
+                        <textarea class="form-control" placeholder="Votre message.." id="message" name="message" required></textarea>
                     </div>
                     <!-- ENVOI -->
                     <input type="submit" value="Envoyer" class="btn btn-primary">
                 </form>
             </div>
             <!-- FIN COL FORMULAIRE-->
-            <div class="col-md-6">
+            <div class="col-md-6 iframe">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5480121.578836245!2d0.4985675391186005!3d47.88141302629982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701c64657be9%3A0xbf05ba902bfe4aab!2s3w+Academy!5e0!3m2!1sfr!2sfr!4v1547133545632"  allowfullscreen class=img-thumbnail id="iframe_partie_contact"></iframe>
             </div>
         </main>
@@ -146,7 +146,7 @@
                 <div class="row contact_social">
                         <div class="col-md-6">
                             <p><i class="fas fa-envelope lien_contact"></i> <a href="mailto:bassole.aristide@laposte.net" class="lien_contact">bassole.aristide@laposte.net</a></p>
-                            <p><i class="fas fa-file-download lien_contact"></i> <a href="assets/files/CV_Aristide_Bassolé.pdf" target="blank" title="Ouvrir dans un nouvel onglet ou télécharger" class="lien_contact">Mon CV (pdf)</a></p>
+                            <p><i class="fas fa-file-download lien_contact"></i> <a href="assets/file/cv_aristide_bassole.pdf" target="blank" title="Ouvrir dans un nouvel onglet ou télécharger" class="lien_contact">Mon CV (pdf)</a></p>
                             <!--<h3 class="titre_iframe"><i class="fas fa-map-marker-alt"></i> Me trouver</i></h3>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5480121.578836245!2d0.4985675391186005!3d47.88141302629982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701c64657be9%3A0xbf05ba902bfe4aab!2s3w+Academy!5e0!3m2!1sfr!2sfr!4v1547133545632" width="80%" height="200" frameborder="0" style="border:0" allowfullscreen class=img-thumbnail></iframe>-->
                         </div>
@@ -168,7 +168,7 @@
     <!-- sources js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src = "assets/js/ajax.js"></script> 
+    <script src = "assets/js/script_ajax.js"></script> 
 </body>
 
 </html>
