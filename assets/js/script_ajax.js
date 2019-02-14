@@ -167,7 +167,7 @@ $(function() {
 
         if ($contact.find(".is-invalid").length === 0) 
         {
-            $contact.parent().replaceWith("<div style = 'font-size : 2em;' class = 'text-success'> Votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div>");
+            $contact.parent().replaceWith("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + $prenom.val().charAt(0).toUpperCase() + $prenom.val().substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div>");
             $(".iframe").remove();
         } else {
             $contact.append("<div style = 'margin : 1em;' class = 'text-danger'>Nous n\'avons pas été en mesure de valider votre demande. Veuillez vérifier vos informations s'il vous plaît.</div>");
