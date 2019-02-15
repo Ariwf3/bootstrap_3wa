@@ -36,11 +36,11 @@
 
     <!-- ROW NAV -->
     <div class="row">
-        <nav class="nav nav-pills nav-justified col-12 container-fluid flex-column flex-sm-row">
+        <nav class="nav nav-pills nav-justified col-12 container-fluid flex-column flex-md-row">
             <a class="nav-item nav-link" href="index.html">Accueil <i class="fas fa-home"></i></a>
             <a class="nav-item nav-link" href="centres_interet.html">Centres d'intérêt <i class="fas fa-bowling-ball"></i></a>
             <a class="nav-item nav-link" href="https://ariwf3.github.io/CV/" target="_blank">Curriculium Vitae <i class="fas fa-university"></i><i class="fas fa-pen"></i></a>
-            <a class="nav-item nav-link active" href="#" tabindex="-1">Contact <i class="fas fa-address-card"></i></a>
+            <a class="nav-item nav-link active" id="lienContact" href="#" tabindex="-1">Contact <i class="fas fa-address-card"></i></a>
         </nav>
     </div>
     <!-- FIN ROW NAV -->
@@ -91,12 +91,16 @@
                     </div>
                     <!-- ENVOI -->
                     <input type="submit" value="Envoyer" class="btn btn-primary">
+                    <input type="reset" value="Réinitialiser" class="btn btn-info" id="reinit">
                 </form>
             </div>
             <!-- FIN COL FORMULAIRE-->
-            <div class="col-md-6 iframe">
+
+            <!-- COL IFRAME-->
+            <div class="col-md-6 iframe mt-4 mt-md-0">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5480121.578836245!2d0.4985675391186005!3d47.88141302629982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701c64657be9%3A0xbf05ba902bfe4aab!2s3w+Academy!5e0!3m2!1sfr!2sfr!4v1547133545632"  allowfullscreen class=img-thumbnail id="iframe_partie_contact"></iframe>
             </div>
+            <!-- FIN COL IFRAME-->
         </main>
         <!-- FIN MAIN-->
         

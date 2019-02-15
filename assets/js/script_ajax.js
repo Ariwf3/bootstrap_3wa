@@ -9,6 +9,10 @@ $(function() {
     let $email   = $("#email");
     let $objet   = $("#objet");
     let $message = $("#message");
+    let $reinit   = $("#reinit");
+    let $lien    = $("#lienContact");
+    let $reload  = $("#bouton_retour");
+    console.log($lien)
 
     // fonction de vérification des erreurs
 
@@ -20,6 +24,7 @@ $(function() {
     //     $(".valid-feedback").remove();
     // } 
 
+    // FONCTIONS NETTOYAGE
     function checkNom(){
         $("#nom.is-invalid").removeClass("is-invalid");
         $("#nom.is-valid").removeClass("is-valid");
@@ -58,6 +63,14 @@ $(function() {
         $("#message.is-valid").removeClass("is-valid");
         $(".col-message .invalid-feedback").remove();
         $(".col-message .valid-feedback").remove();
+    }
+
+    //Nettoyage classes bouton reset
+    function reset(){
+        $reinit.on("click", function () {
+            $("div.invalid-feedback, div.valid-feedback").remove(".valid-feedback, .invalid-feedback");
+            $("#nom.is-invalid, #nom.is-valid, #prenom.is-invalid, #prenom.is-valid, #societe.is-invalid, #societe.is-valid, #email.is-invalid, #email.is-valid, #objet.is-invalid, #objet.is-valid, #message.is-invalid, #message.is-valid").removeClass("is-valid is-invalid");
+        })
     }
 
     //societe email objet message
@@ -158,6 +171,9 @@ $(function() {
     })
     // FIN vérification message keyup
 
+    // RESET REINIT
+    reset();
+
     // Soumission formulaire event submit
     $contact.on("submit", function(e){
         e.preventDefault();
@@ -167,10 +183,26 @@ $(function() {
 
         if ($contact.find(".is-invalid").length === 0) 
         {
-            $contact.parent().replaceWith("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + $prenom.val().charAt(0).toUpperCase() + $prenom.val().substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div>");
+            $contact.parent().replaceWith("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + $prenom.val().charAt(0).toUpperCase() + $prenom.val().substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais. <a href ='contact.html' id='bouton_retour'><button class='btn btn-success'>Revenir au formulaire</button></a></div>");
             $(".iframe").remove();
+
+            // rechargement de la page au click de contact ou du bouton ajouté dynamiquement
+            $lien.on("click",function(){
+                location.reload();
+            })
+            $reload.on("click",function(){
+                location.reload();
+            })
         } else {
-            $contact.append("<div style = 'margin : 1em;' class = 'text-danger'>Nous n\'avons pas été en mesure de valider votre demande. Veuillez vérifier vos informations s'il vous plaît.</div>");
+            $contact.append("<div style = 'margin : 1em;' class = 'text-danger'>Nous n\'avons pas été en mesure de valider votre demande. Veuillez vérifier vos informations s'il vous plaît.<a href ='contact.html'><button class='btn btn-danger' id='bouton_retour'>Revenir au formulaire</button></a></div>");
+
+            // rechargement de la page au clic de contact ou du bouton ajouté dynamiquement
+            $lien.on("click",function(){
+                location.reload();
+            })
+            $reload.on("click", function(){
+                location.reload();
+            })
         }
     })
     // Soumission formulaire event submit
