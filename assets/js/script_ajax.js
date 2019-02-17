@@ -181,7 +181,7 @@ $(function() {
 
         if ($contact.find(".is-invalid").length === 0 && $prenom.hasClass("is-valid") && $nom.hasClass("is-valid") && $email.hasClass("is-valid") && $objet.hasClass("is-valid") && $message.hasClass("is-valid") ) 
         {
-            $contact.append("<div class='text-success all-success'><i>Tout semble correct!</i></div>")
+            $contact.append("<div class='text-success all-success'><i>Tout semble correct ! </i><i class='fas fa-space-shuttle'></i></div>")
         } else {
             $("#form_contact .text-success").remove();
         }
