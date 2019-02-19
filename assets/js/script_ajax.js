@@ -196,7 +196,6 @@ $(function() {
 
         let serialized = $contact.serialize();
         
-        //requête ajax
 
                  //Verif erreurs
                  $('#form_contact .text-danger').remove();
@@ -228,7 +227,7 @@ $(function() {
                  } // fin else
 
                  }); // fin event submit
-    // }) 
+    
     // FIN Soumission formulaire event submit
 
 }) // fin jQuery
