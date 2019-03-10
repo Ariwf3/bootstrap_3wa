@@ -194,16 +194,33 @@ $(function() {
     $contact.on("submit", function(e){
         e.preventDefault();
 
-        let serialized = $contact.serialize();
-        
-
-                 //Verif erreurs
-                 $('#form_contact .text-danger').remove();
+        // variables de données à envoyer
+        let $nom = encodeURIComponent($("#nom").val()),
+        $prenom = encodeURIComponent($("#prenom").val()),
+        $email = encodeURIComponent($("#email").val()),
+        $societe = encodeURIComponent($("#societe").val()),
+        $objet = encodeURIComponent($("#objet").val()),
+        $message = encodeURIComponent($("#message").val());
+    
+        console.log($prenom);
+        console.log($nom);
+        $.post("contact.php",{
+            prenom:$prenom,
+            nom:$nom,
+            email: $email,
+            societe:$societe,
+            objet:$objet,
+            message:$message
+        },
+            function(data) {
+                if (data === "1") {
+                    //Verif erreurs
+                 $('main #erreur-validation').remove();
 
                  if ($contact.find(".is-invalid").length === 0) {
                      // remplacement form par message de succès
                      $contact.remove();
-                     $("main").append("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + $prenom.val().charAt(0).toUpperCase() + $prenom.val().substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div><a href ='contact.html' id='bouton_retour'><button class='btn btn-success mt-4'>Revenir au formulaire</button></a>").hide().fadeIn(700);
+                     $("main").append("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + decodeURIComponent($prenom).charAt(0).toUpperCase() + decodeURIComponent($prenom).substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div><a href ='contact.html' id='bouton_retour'><button class='btn btn-success mt-4'>Revenir au formulaire</button></a>").hide().fadeIn(700);
                      $(".iframe").remove();
 
                      // rechargement de la page au click de contact ou du bouton ajouté dynamiquement
@@ -226,7 +243,18 @@ $(function() {
 
                  } // fin else
 
-                 }); // fin event submit
+                 // s'il y a une erreur
+                } else {
+                    $('main .text-danger').remove();
+
+                    $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Une erreur serveur est survenue veuillez réésayer ultérieurement s'il vous plaît.</div>").hide().fadeIn(400);
+                }
+            },//fin fonction retour
+            "html"
+        );
+                 
+
+        }); // fin event submit
     
     // FIN Soumission formulaire event submit
 
