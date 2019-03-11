@@ -44,16 +44,21 @@ $message = $message;
 // j'initialise un booleen
 $bool = false;
 
-// si les données existent et ne sont pas vides
+// si les données existent(soumission) et ne sont pas vides
 if (isset($_POST) && !empty($_POST)) {
     // je passe mon booleen a true
     $bool = true;
     // si mon booleen est true
     if ($bool === true) 
     {
-        if(mail($destinataire, $objet, $message, $headers))
+        $bool = '1';
+        if($bool === '1')
         {
-            $bool = '1';
+            if(!mail($destinataire, $objet, $message, $headers))
+            {
+                $bool = '0';
+            }
+            
         } else {
             $bool = '0';
         }

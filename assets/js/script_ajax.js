@@ -207,67 +207,57 @@ $(function() {
     
         console.log($prenom);
         console.log($nom);
-        $.post("contact.php",{
-            // trim() pour suppression d'espaces éventuels
-            prenom:$prenom.trim(),
-            nom:$nom.trim(),
-            email: $email.trim(),
-            societe:$societe.trim(),
-            objet:$objet.trim(),
-            message:$message.trim()
-        },
+
+        //bloc test
+        
+        if($contact.find(".is-invalid").length === 0 ) {
+
+            $('main #erreur-validation').remove();
+            
+            $.post("contact.php",{
+                // trim() pour suppression d'espaces éventuels
+                prenom:$prenom.trim(),
+                nom:$nom.trim(),
+                email: $email.trim(),
+                societe:$societe.trim(),
+                objet:$objet.trim(),
+                message:$message.trim()
+            }, 
             function(data) {
-                
-                //Verif erreurs
-                $('main #erreur-validation').remove();
-                
-                if($contact.find(".is-invalid").length === 0 ) {
-                    if (data === '1') {
-                        console.log($contact);
-                        console.log($prenom);
-                        // remplacement form par message de succès
-                        $contact.remove();
-                        $("main").append("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + decodeURIComponent($prenom).trim().charAt(0).toUpperCase() + decodeURIComponent($prenom).trim().substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div><a href ='contact.html' id='bouton_retour'><button class='btn btn-success mt-4'>Revenir au formulaire</button></a>").hide().fadeIn(700);
-                        $(".iframe").remove();
+                if (data === '1') {
+                    $contact.remove();
+                    $("main").append("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + decodeURIComponent($prenom).trim().charAt(0).toUpperCase() + decodeURIComponent($prenom).trim().substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div><a href ='contact.html' id='bouton_retour'><button class='btn btn-success mt-4'>Revenir au formulaire</button></a>").hide().fadeIn(700);
+                    $(".iframe").remove();
 
-                        // rechargement de la page au click de contact ou du bouton ajouté dynamiquement
-                        $lien.on("click", function () {
-                            location.reload();
-                        })
-                        $reload.on("click", function () {
-                            location.reload();
-                        })
-                    } else {
-
-                        $('main .text-danger').remove();
-                    
-                        $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Une erreur serveur est survenue. Veuillez rééséyer ultérieurement s'il vous plaît.</div>").hide().fadeIn(400); 
-                    }  // fin verif données serveur
-                } else {
-                    //  $contact.remove();
-                    $('main .text-danger').remove();
-                    
-                    $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Nous n\'avons pas été en mesure de valider votre demande. Veuillez vérifier vos informations s'il vous plaît. <span style = 'font-weight:bold;'>( "+ $('.is-invalid').length + " champ(s) incorrect(s) )</span></div>").hide().fadeIn(400);
-
-                    // rechargement de la page au clic de contact
+                    // rechargement de la page au click de contact ou du bouton ajouté dynamiquement
                     $lien.on("click", function () {
                         location.reload();
                     })
-
-                } // fin else verif client
-
-                // s'il y a une erreur serveur
-                /* } else {
+                    $reload.on("click", function () {
+                        location.reload();
+                    })
+                } else {  //s'il y a une erreur serveur
                     $('main .text-danger').remove();
+                
+                    $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Une erreur serveur est survenue. Veuillez rééséyer ultérieurement s'il vous plaît.</div>").hide().fadeIn(400); 
+                }  // fin verif données serveur
+            },
+            "html");
 
-                    $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Une erreur serveur est survenue veuillez réésayer ultérieurement s'il vous plaît.</div>").hide().fadeIn(500);
-                } */
-            },//fin fonction retour
-            "html"
-        );
+        } else { // si la verif client ne passe pas
+            $('main .text-danger').remove();
+                    
+            $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Nous n\'avons pas été en mesure de valider votre demande. Veuillez vérifier vos informations s'il vous plaît. <span style = 'font-weight:bold;'>( "+ $('.is-invalid').length + " champ(s) incorrect(s) )</span></div>").hide().fadeIn(400);
 
+            // rechargement de la page au clic de contact
+            $lien.on("click", function () {
+                location.reload();
+            })
+        } // fin verif client
+    
+        })
+        
 
-        }); // fin event submit
     
     // FIN Soumission formulaire event submit
 
