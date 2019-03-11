@@ -4,8 +4,7 @@ function vd($v){
 var_dump($v);
 }
 
-
-
+// variables réencodées et suppression des eventuels espaces en début et fin
 $nom = trim(urldecode($_POST["nom"]));
 $prenom = trim(urldecode($_POST["prenom"]));
 $objet = trim(urldecode($_POST["objet"]));
@@ -49,19 +48,58 @@ $bool = false;
 if (isset($_POST) && !empty($_POST)) {
     // je passe mon booleen a true
     $bool = true;
-    // si mon booleen et mon mail sont true
+    // si mon booleen est true
     if ($bool === true) 
     {
-        $bool = '1';
-        if ($bool === '1' && mail($destinataire, $objet, $message, $headers) === true) 
+        if(mail($destinataire, $objet, $message, $headers))
         {
-            // on renvoie au script ajax 1 sinon 0(false)
-            echo $bool; //1
+            $bool = '1';
         } else {
-            echo '0';
+            $bool = '0';
         }
-    } 
+    } else {
+        $bool = '0';
+    }
+    echo $bool;
+} else {
+    $bool = '0';
+} // fin isset
+
+
+/* if ($bool === '1') 
+{
+    // si ma fonction mail vaut true
+    if(mail($destinataire, $objet, $message, $headers))
+    {
+        // j'envoie 1 au script ajax
+        echo $bool; 
+    } else {
+        echo '0';
+    }
 } else {
     echo '0';
-}
+} */
 
+/* tests
+
+$b = "valeur2";
+$a = "valeur";
+if (isset($a) && !empty($a)) {
+    // je passe mon booleen a true
+    $bool = true;
+    // si mon booleen est true
+    if ($bool === true) 
+    {
+        if($b == "valeur2")
+        {
+            $bool = '1';
+        } else {
+           $bool = '0';
+        }
+    } else {
+        $bool = '0';
+    }
+    echo $bool;
+} else {
+    echo '0';
+} // fin isset */

@@ -14,7 +14,6 @@ $(function() {
     let $reload  = $("#bouton_retour");
     
     let serialized = $contact.serialize();
-    console.log(serialized);
     
 
     // fonction de vérification des erreurs
@@ -194,9 +193,13 @@ $(function() {
     $contact.on("submit", function(e){
         e.preventDefault();
 
-        // variables de données à envoyer
-        let $nom = encodeURIComponent($("#nom").val()),
-        $prenom = encodeURIComponent($("#prenom").val()),
+        /* 
+        variables de données à envoyer
+        - encodeUriComponent pour protéger des caractères spéciaux
+        - formatage Majuscule première lettre, min pour le reste pour Nom et Prénom
+        */
+        let $nom = encodeURIComponent( $("#nom").val().charAt(0).toUpperCase() ) + encodeURIComponent( $("#nom").val().substring(1).toLowerCase() ),
+        $prenom = encodeURIComponent( $("#prenom").val().charAt(0).toUpperCase() ) + encodeURIComponent( $("#prenom").val().substring(1).toLowerCase() ),
         $email = encodeURIComponent($("#email").val()),
         $societe = encodeURIComponent($("#societe").val()),
         $objet = encodeURIComponent($("#objet").val()),
@@ -205,54 +208,64 @@ $(function() {
         console.log($prenom);
         console.log($nom);
         $.post("contact.php",{
-            prenom:$prenom,
-            nom:$nom,
-            email: $email,
-            societe:$societe,
-            objet:$objet,
-            message:$message
+            // trim() pour suppression d'espaces éventuels
+            prenom:$prenom.trim(),
+            nom:$nom.trim(),
+            email: $email.trim(),
+            societe:$societe.trim(),
+            objet:$objet.trim(),
+            message:$message.trim()
         },
             function(data) {
-                if (data === "1") {
-                    //Verif erreurs
-                 $('main #erreur-validation').remove();
+                
+                //Verif erreurs
+                $('main #erreur-validation').remove();
+                
+                if($contact.find(".is-invalid").length === 0 ) {
+                    if (data === '1') {
+                        console.log($contact);
+                        console.log($prenom);
+                        // remplacement form par message de succès
+                        $contact.remove();
+                        $("main").append("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + decodeURIComponent($prenom).trim().charAt(0).toUpperCase() + decodeURIComponent($prenom).trim().substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div><a href ='contact.html' id='bouton_retour'><button class='btn btn-success mt-4'>Revenir au formulaire</button></a>").hide().fadeIn(700);
+                        $(".iframe").remove();
 
-                 if ($contact.find(".is-invalid").length === 0) {
-                     // remplacement form par message de succès
-                     $contact.remove();
-                     $("main").append("<div style = 'font-size : 2em;' class = 'text-success'> Je vous remercie " + decodeURIComponent($prenom).charAt(0).toUpperCase() + decodeURIComponent($prenom).substring(1).toLowerCase() + " votre demande a bien été envoyée ! Je vous répondrai dans les meilleurs délais.</div><a href ='contact.html' id='bouton_retour'><button class='btn btn-success mt-4'>Revenir au formulaire</button></a>").hide().fadeIn(700);
-                     $(".iframe").remove();
+                        // rechargement de la page au click de contact ou du bouton ajouté dynamiquement
+                        $lien.on("click", function () {
+                            location.reload();
+                        })
+                        $reload.on("click", function () {
+                            location.reload();
+                        })
+                    } else {
 
-                     // rechargement de la page au click de contact ou du bouton ajouté dynamiquement
-                     $lien.on("click", function () {
-                         location.reload();
-                     })
-                     $reload.on("click", function () {
-                         location.reload();
-                     })
-                 } else {
+                        $('main .text-danger').remove();
+                    
+                        $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Une erreur serveur est survenue. Veuillez rééséyer ultérieurement s'il vous plaît.</div>").hide().fadeIn(400); 
+                    }  // fin verif données serveur
+                } else {
                     //  $contact.remove();
                     $('main .text-danger').remove();
                     
-                     $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Nous n\'avons pas été en mesure de valider votre demande. Veuillez vérifier vos informations s'il vous plaît.</div>").hide().fadeIn(400);
+                    $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Nous n\'avons pas été en mesure de valider votre demande. Veuillez vérifier vos informations s'il vous plaît. <span style = 'font-weight:bold;'>( "+ $('.is-invalid').length + " champ(s) incorrect(s) )</span></div>").hide().fadeIn(400);
 
-                     // rechargement de la page au clic de contact
-                     $lien.on("click", function () {
-                         location.reload();
-                     })
+                    // rechargement de la page au clic de contact
+                    $lien.on("click", function () {
+                        location.reload();
+                    })
 
-                 } // fin else
+                } // fin else verif client
 
-                 // s'il y a une erreur
-                } else {
+                // s'il y a une erreur serveur
+                /* } else {
                     $('main .text-danger').remove();
 
-                    $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Une erreur serveur est survenue veuillez réésayer ultérieurement s'il vous plaît.</div>").hide().fadeIn(400);
-                }
+                    $("main").append("<div style = 'margin : 1em;' class = 'text-danger' id = 'erreur-validation'>Une erreur serveur est survenue veuillez réésayer ultérieurement s'il vous plaît.</div>").hide().fadeIn(500);
+                } */
             },//fin fonction retour
             "html"
         );
-                 
+
 
         }); // fin event submit
     
